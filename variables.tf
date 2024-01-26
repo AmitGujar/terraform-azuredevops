@@ -1,20 +1,10 @@
-variable "resource_name" {
-  # default     = "rg-terraform-test-001"
+variable "org_service_url" {
   type        = string
-  description = "name of resource group"
+  description = "This will be the url of the Azure DevOps organization"
 }
 
-variable "location" {
-  default = "centralindia"
-  type    = string
-}
+variable "azuredevops_pat_token" {
+  type        = string
+  description = "This will be the personal access token for Azure DevOps"
 
-variable "app_service_plan_name" {
-  default = "custom-plan-tf"
-  type    = string
-}
-
-variable "webapp_name" {
-  default = "custom-webapp-tf"
-  type    = string 
 }
