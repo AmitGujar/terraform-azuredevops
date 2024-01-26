@@ -1,3 +1,3 @@
 output "service_endpoint_output" {
-  # future code
+  value = module.service_endpoint.service_endpoint_output
 }

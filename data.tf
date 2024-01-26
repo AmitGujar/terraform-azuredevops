@@ -1,3 +1,3 @@
-data "azurerm_virtual_network" "data_virtual_network" {
-  # future code
+data "azuredevops_project" "aks_sec_project" {
+  name = var.project_name
 }
