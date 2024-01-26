@@ -1,10 +1,4 @@
-# Terraform Template
-
-This is a starter template for your terraform projects which uses Azure as a provider.
-
-You can add your resources in modules and make changes accordingly.
-
-This template also contains azure blob for the backend. You need to configure that manually.
+# Terraform for Azure DevOps portal
 
 ### Initialize terraform
 
@@ -15,7 +9,7 @@ terraform init -upgrade
 ### Make a plan
 
 ```
-terraform plan -out main.tfplan
+terraform plan -out main.tfplan -var-file=secret.tfvars
 ```
 
 ### Apply changes
@@ -24,5 +18,17 @@ terraform plan -out main.tfplan
 terraform apply.
 ```
 
-### Execute connect.ps1 file to get access of jumpbox vm.
+### Following env vars are required
+```
+azuredevops_pat_token  = ""
+orgazation_service_url = ""
+service_endpoint_name  = ""
+client_id              = ""
+client_secret          = ""
+tenant_id              = ""
+subscription_id        = ""
+subscription_name      = ""
+project_name           = ""
+
+```
 
