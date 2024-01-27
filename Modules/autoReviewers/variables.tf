@@ -4,5 +4,13 @@ variable "project_id" {
 
 variable "auto_reviewers" {
   type = string
-  
+
+}
+
+variable "repository_id" {
+  type = string
+}
+
+variable "repository_ref_branch" {
+  type = string
 }
