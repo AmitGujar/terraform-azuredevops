@@ -25,8 +25,10 @@ module "buildValidation" {
 }
 
 module "environment" {
-  source     = "./Modules/environments"
-  project_id = data.azuredevops_project.aks_sec_project.id
+  source          = "./Modules/environments"
+  project_id      = data.azuredevops_project.aks_sec_project.id
+  environment_one = var.environment_one
+  environment_two = var.environment_two
 }
 
 module "checkApproval" {

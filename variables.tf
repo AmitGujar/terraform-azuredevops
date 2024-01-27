@@ -44,3 +44,13 @@ variable "default_repository_name" {
 variable "auto_reviewers" {
   type = string
 }
+
+variable "environment_one" {
+  type    = string
+  default = "Development"
+}
+
+variable "environment_two" {
+  type    = string
+  default = "Production"
+}

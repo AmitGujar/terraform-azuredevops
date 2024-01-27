@@ -9,12 +9,12 @@ terraform {
 
 resource "azuredevops_environment" "development" {
   project_id  = var.project_id
-  name        = "Development"
+  name        = var.environment_one
   description = "Development environment Managed by Terraform"
 }
 
 resource "azuredevops_environment" "production" {
   project_id  = var.project_id
-  name        = "Production"
+  name        = var.environment_two
   description = "Production environment Managed by Terraform"
 }
