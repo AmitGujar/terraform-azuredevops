@@ -28,3 +28,11 @@ module "environment" {
   source     = "./Modules/environments"
   project_id = data.azuredevops_project.aks_sec_project.id
 }
+
+module "checkApproval" {
+  source          = "./Modules/checkApproval"
+  project_id      = data.azuredevops_project.aks_sec_project.id
+  auto_reviewers  = var.auto_reviewers
+  environment_one = data.azuredevops_environment.environment_one.id
+  environment_two = data.azuredevops_environment.environment_two.id
+}
