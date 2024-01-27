@@ -23,3 +23,8 @@ module "buildValidation" {
   repository_id         = data.azuredevops_git_repository.aks_sec_default_repo.id
   repository_ref_branch = data.azuredevops_git_repository.aks_sec_default_repo.default_branch
 }
+
+module "environment" {
+  source     = "./Modules/environments"
+  project_id = data.azuredevops_project.aks_sec_project.id
+}
