@@ -36,3 +36,11 @@ variable "subscription_name" {
 variable "project_name" {
   type = string
 }
+
+variable "default_repository_name" {
+  type = string
+}
+
+variable "auto_reviewers" {
+  type = string
+}
