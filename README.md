@@ -19,6 +19,7 @@ terraform apply.
 ```
 
 ### Following env vars are required
+
 ```
 azuredevops_pat_token  = ""
 orgazation_service_url = ""
@@ -29,6 +30,6 @@ tenant_id              = ""
 subscription_id        = ""
 subscription_name      = ""
 project_name           = ""
-
+default_repository_name = ""
+auto_reviewers          = "id of the user who wants to be approver"
 ```
-
