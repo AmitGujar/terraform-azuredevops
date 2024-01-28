@@ -19,13 +19,14 @@ terraform {
 # creating build definition on Azure DevOps project
 resource "azuredevops_build_definition" "build_definition" {
   project_id = var.project_id
-  name       = "Branch Validation Build"
+  name       = "Branch Validation"
 
   repository {
     repo_type = "TfsGit"
     # repo_id   = azuredevops_git_repository.new_repo.id
-    repo_id  = var.repository_id
-    yml_path = "build_templates/main.yml"
+    repo_id     = var.repository_id
+    branch_name = var.repository_ref_branch
+    yml_path    = "build_templates/main.yml"
   }
 }
 
