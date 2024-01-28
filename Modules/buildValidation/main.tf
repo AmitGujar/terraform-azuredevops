@@ -10,7 +10,7 @@ terraform {
 # creating repository on Azure DevOps project
 # resource "azuredevops_git_repository" "new_repo" {
 #   project_id = var.project_id
-#   name       = "development"
+#   name       = "terraform_managed"
 #   initialization {
 #     init_type = "Clean"
 #   }
