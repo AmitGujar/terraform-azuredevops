@@ -15,9 +15,9 @@ output "repository_name" {
 }
 
 output "environment_one" {
-  value = module.environment.development_environment
+  value = module.environment.development_environment_name
 }
 
 output "environment_two" {
-  value = module.environment.production_environment
+  value = module.environment.production_environment_name
 }
