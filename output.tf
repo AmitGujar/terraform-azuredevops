@@ -7,7 +7,7 @@ output "amit_gujar_id" {
 }
 
 output "repository_ref_branch" {
-  value = data.azuredevops_git_repository.aks_sec_default_repo.default_branch
+  value = var.repository_ref_branch
 }
 
 output "repository_name" {

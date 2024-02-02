@@ -54,3 +54,7 @@ variable "environment_two" {
   type    = string
   default = "Production"
 }
+
+variable "repository_ref_branch" {
+  type = string
+}

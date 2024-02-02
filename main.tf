@@ -10,18 +10,20 @@
 # }
 
 module "auto_reviewer" {
-  source                = "./Modules/autoReviewers"
-  project_id            = data.azuredevops_project.aks_sec_project.id
-  auto_reviewers        = var.auto_reviewers
-  repository_id         = data.azuredevops_git_repository.aks_sec_default_repo.id
-  repository_ref_branch = data.azuredevops_git_repository.aks_sec_default_repo.default_branch
+  source         = "./Modules/autoReviewers"
+  project_id     = data.azuredevops_project.aks_sec_project.id
+  auto_reviewers = var.auto_reviewers
+  repository_id  = data.azuredevops_git_repository.aks_sec_default_repo.id
+  # repository_ref_branch = data.azuredevops_git_repository.aks_sec_default_repo.default_branch
+  repository_ref_branch = var.repository_ref_branch
 }
 
 module "buildValidation" {
-  source                = "./Modules/buildValidation"
-  project_id            = data.azuredevops_project.aks_sec_project.id
-  repository_id         = data.azuredevops_git_repository.aks_sec_default_repo.id
-  repository_ref_branch = data.azuredevops_git_repository.aks_sec_default_repo.default_branch
+  source        = "./Modules/buildValidation"
+  project_id    = data.azuredevops_project.aks_sec_project.id
+  repository_id = data.azuredevops_git_repository.aks_sec_default_repo.id
+  # repository_ref_branch = data.azuredevops_git_repository.aks_sec_default_repo.default_branch
+  repository_ref_branch = var.repository_ref_branch
 }
 
 module "environment" {

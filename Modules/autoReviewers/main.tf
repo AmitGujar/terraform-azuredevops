@@ -41,7 +41,11 @@ resource "azuredevops_branch_policy_auto_reviewers" "tf_auto_reviewers" {
     }
 
     scope {
-      match_type = "DefaultBranch"
+      # match_type = "DefaultBranch"
+
+      #! by this way the inheritance scope will be applied to certain branch
+      repository_ref = var.repository_ref_branch
+      match_type     = "Exact"
     }
   }
 }

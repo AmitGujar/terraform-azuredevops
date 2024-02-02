@@ -64,7 +64,11 @@ resource "azuredevops_branch_policy_build_validation" "build_validation" {
     # this scope defines the main branch in all repos will be validated
     # this scope is also act as a inheritance scope
     scope {
-      match_type = "DefaultBranch"
+      # match_type = "DefaultBranch"
+
+      #! by this way the inheritance scope will be applied to certain branch
+      repository_ref = var.repository_ref_branch
+      match_type     = "Exact"
     }
   }
 }
@@ -90,7 +94,11 @@ resource "azuredevops_branch_policy_min_reviewers" "min_reviewers" {
 
     # inheritance scope
     scope {
-      match_type = "DefaultBranch"
+      # match_type = "DefaultBranch"
+
+      #! by this way the inheritance scope will be applied to certain branch
+      repository_ref = var.repository_ref_branch
+      match_type     = "Exact"
     }
   }
 }
