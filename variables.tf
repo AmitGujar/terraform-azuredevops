@@ -58,3 +58,19 @@ variable "environment_two" {
 variable "repository_ref_branch" {
   type = string
 }
+
+variable "registry_url" {
+  type = string
+}
+
+variable "docker_id" {
+  type = string
+}
+
+variable "docker_password" {
+  type = string
+}
+
+variable "registry_type" {
+  type = string
+}

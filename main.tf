@@ -7,6 +7,10 @@
 #   tenant_id             = var.tenant_id
 #   subscription_id       = var.subscription_id
 #   subscription_name     = var.subscription_name
+#   registry_url          = var.registry_url
+#   docker_id             = var.docker_id
+#   docker_password       = var.docker_password
+#   registry_type         = var.registry_type
 # }
 
 module "auto_reviewer" {

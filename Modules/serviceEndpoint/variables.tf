@@ -25,3 +25,19 @@ variable "subscription_id" {
 variable "subscription_name" {
   type = string
 }
+
+variable "registry_url" {
+  type = string 
+}
+
+variable "docker_id" {
+  type = string
+}
+
+variable "docker_password" {
+  type = string
+}
+
+variable "registry_type" {
+  type = string
+}
