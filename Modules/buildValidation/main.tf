@@ -74,31 +74,38 @@ resource "azuredevops_branch_policy_build_validation" "build_validation" {
 }
 
 # it will apply minmium number of reviewers required to approve a pull request
-resource "azuredevops_branch_policy_min_reviewers" "min_reviewers" {
-  project_id = var.project_id
 
-  enabled  = true
-  blocking = true
 
-  settings {
-    reviewer_count                         = 1 #minimum reviewers required to approve
-    submitter_can_vote                     = false
-    last_pusher_cannot_approve             = true
-    allow_completion_with_rejects_or_waits = false
 
-    scope {
-      repository_id  = var.repository_id
-      repository_ref = var.repository_ref_branch
-      match_type     = "Exact"
-    }
+#! to be done laters
 
-    # inheritance scope
-    scope {
-      # match_type = "DefaultBranch"
 
-      #! by this way the inheritance scope will be applied to certain branch
-      repository_ref = var.repository_ref_branch
-      match_type     = "Exact"
-    }
-  }
-}
+
+# resource "azuredevops_branch_policy_min_reviewers" "min_reviewers" {
+#   project_id = var.project_id
+
+#   enabled  = true
+#   blocking = true
+
+#   settings {
+#     reviewer_count                         = 1 #minimum reviewers required to approve
+#     submitter_can_vote                     = false
+#     last_pusher_cannot_approve             = true
+#     allow_completion_with_rejects_or_waits = false
+
+#     scope {
+#       repository_id  = var.repository_id
+#       repository_ref = var.repository_ref_branch
+#       match_type     = "Exact"
+#     }
+
+#     # inheritance scope
+#     scope {
+#       # match_type = "DefaultBranch"
+
+#       #! by this way the inheritance scope will be applied to certain branch
+#       repository_ref = var.repository_ref_branch
+#       match_type     = "Exact"
+#     }
+#   }
+# }
