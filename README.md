@@ -3,7 +3,7 @@
 ### Initialize terraform
 
 ```
-terraform init -upgrade
+terraform init
 ```
 
 ### Make a plan
